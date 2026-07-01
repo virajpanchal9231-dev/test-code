@@ -1,5 +1,2 @@
-FROM ubuntu:22.04
-RUN apt-get update && apt-get install -y apache2
-WORKDIR  /var/www/html/var/www/html/index.html
-COPY index.html .
-CMD ['apachectl', '-D' 'FOREGROUND']
+FROM https:latest
+COPY index.html/user/local/apache2/htdocs/
