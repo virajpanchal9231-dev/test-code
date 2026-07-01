@@ -1,0 +1,7 @@
+version: '3'
+service:
+  web:
+    build:
+      container_name: my-container
+      port:
+        - "8081:80"
