@@ -1,20 +1,301 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>DevOps Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechWorld - Learn & Grow</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+            color: #222;
+        }
+
+        /* Navbar */
+        nav {
+            background: #111827;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 500px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 8%;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            color: white;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            font-size: 19px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #dbeafe;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        /* Cards */
+        .services {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h3 {
+            margin: 15px 0;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .icon {
+            font-size: 45px;
+        }
+
+        /* About */
+        .about {
+            background: #e0f2fe;
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        /* Footer */
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                text-align: center;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <center>
-        <h1>Welcome to My DevOps Project</h1>
-        <h2>CI/CD Pipeline Demo</h2>
 
-        <p>GitHub → Jenkins → Docker → Apache</p>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            Tech<span>World</span>
+        </div>
 
-        <h3>Project Status</h3>
-        <p>Deployment Successful ✅</p>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <h3>Created By</h3>
-        <p>pradeep </p>
-    </center>
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>
+                Learn <span>Technology</span>
+                & Build Your Future
+            </h1>
+
+            <p>
+                Learn Web Development, Docker, Jenkins,
+                AWS, DevOps and other modern technologies
+                with simple practical projects.
+            </p>
+
+            <a href="#services" class="btn">
+                Explore More
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Services -->
+    <section class="services" id="services">
+
+        <h2>What We Teach</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">🌐</div>
+                <h3>Web Development</h3>
+                <p>
+                    Learn HTML, CSS and JavaScript
+                    and create beautiful websites.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🐳</div>
+                <h3>Docker</h3>
+                <p>
+                    Learn containers, Docker images,
+                    Dockerfiles and deployment.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">⚙️</div>
+                <h3>DevOps</h3>
+                <p>
+                    Learn Jenkins, CI/CD pipelines,
+                    Git, AWS and automation.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <h2>About Us</h2>
+
+        <p>
+            Welcome to TechWorld. Our goal is to make
+            technology easy to understand through
+            practical examples and real-world projects.
+            Start learning today and build your skills.
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="contact">
+
+        <p>
+            © 2026 TechWorld | Learn • Build • Grow
+        </p>
+
+    </footer>
+
 </body>
 </html>
